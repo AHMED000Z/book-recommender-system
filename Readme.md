@@ -1,53 +1,37 @@
 # 📚 Book Recommender System
 
-A semantic book recommendation web app that suggests books based on your mood, preferences, and a natural language description — powered by sentence embeddings, LangChain, and ChromaDB.
+A semantic book recommender system using LangChain, HuggingFace embeddings, Gradio, and ChromaDB. This project takes user input in natural language and recommends books based on semantic similarity, emotional tone, and simplified categories.
 
 ---
 
-## 🌟 Features
+## 🚀 Features
 
-- 🔍 **Semantic Search**: Uses sentence-level embeddings to find books similar to your query.
-- 🎭 **Emotion-Based Filtering**: Filter results based on emotional tone (Happy, Sad, Angry, etc.).
-- 🧠 **AI-Driven**: Embeddings powered by HuggingFace (`all-MiniLM-L6-v2`).
-- 🎨 **Clean UI**: Built with Gradio for an interactive, modern frontend.
-- 📦 **Self-contained**: Uses local ChromaDB for fast retrieval.
-
----
-
-## 🚀 Demo
-
-![Book Recommender UI](screenshot.png)
-
-> 📌 _Replace `screenshot.png` with your actual screenshot file name or a link._
+- Vector search using LangChain + HuggingFace embeddings
+- Sentiment-based filtering (Happy, Sad, Angry, etc.)
+- Category classification using Zero-shot learning
+- Clean and responsive Gradio UI with dark mode
+- Text truncation and thumbnail preview for visual appeal
 
 ---
 
-## 🧠 How It Works
-
-1. **Text Data**: Book descriptions are pre-tagged with emotional sentiment scores.
-2. **Text Embeddings**: Descriptions are converted into vector embeddings.
-3. **Vector Search**: Query is embedded and compared using cosine similarity via ChromaDB.
-4. **Filtering**: Users can refine results by category and tone.
-
----
-
-## 🛠 Tech Stack
-
-- 🐍 Python
-- 🤗 HuggingFace Transformers (`all-MiniLM-L6-v2`)
-- 🧱 ChromaDB (vector store)
-- 🔗 LangChain for semantic search
-- 📊 Pandas & NumPy for data wrangling
-- 🌐 Gradio for the web UI
-
----
-
-## 📁 Project Structure
+## 🗂️ Project Structure
 
 book-recommender-system/
+├── data/
+│ ├── books.csv # Raw dataset
+│ ├── books cleaned.csv # Cleaned dataset
+│ ├── books with emotions.csv # Dataset enriched with emotion scores
+│ └── tagged_description.txt # Descriptions used for vector search
 │
-├── main.py # Main app file (Gradio + logic)
-├── books_with_emotions.csv # CSV dataset with book metadata & emotion scores
-├── tagged_description.txt # Preprocessed tagged descriptions
-├── requirements.txt # Required dependencies
-└── README.md # This file
+├── notebooks/
+│ ├── data-exploration.ipynb # EDA and data cleaning
+│ ├── vector_search.ipynb # Building semantic search
+│ ├── sentiment_analysis.ipynb # Adding emotions to data
+│ └── text_classification.ipynb # Category simplification using zero-shot
+│
+│
+├── main.py # Main Gradio app
+├── requirements.txt # Dependencies
+├── .gitignore
+├──missing_cover.png
+└── README.md
