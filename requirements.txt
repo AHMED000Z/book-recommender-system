@@ -1,0 +1,8 @@
+gradio
+pandas
+numpy
+langchain
+langchain-community
+langchain-chroma
+python-dotenv
+sentence-transformers
