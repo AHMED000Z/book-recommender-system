@@ -320,17 +320,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **HuggingFace**: For embedding models and transformers
 - **Gradio**: For the intuitive UI framework
 - **ChromaDB**: For vector storage and retrieval
-- **Contributors**: Thanks to all contributors who have helped improve this project
-
----
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-
-1. Check the [Issues](https://github.com/yourusername/book-recommender-system/issues) page
-2. Create a new issue with detailed information
-3. For urgent matters, contact [your.email@example.com](mailto:your.email@example.com)
 
 ---
 
