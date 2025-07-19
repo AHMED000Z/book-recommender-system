@@ -1,0 +1,56 @@
+# Application Configuration
+app:
+  name: "Book Recommender System"
+  version: "1.0.0"
+  debug: false
+  host: "0.0.0.0"
+  port: 7860
+
+# Data Configuration
+data:
+  books_file: "data/books_with_emotions.csv"
+  descriptions_file: "data/tagged_description.txt"
+  missing_cover_image: "assets/missing_cover.png"
+  
+# Model Configuration
+model:
+  embedding_model: "all-MiniLM-L6-v2"
+  chunk_size: 0
+  chunk_overlap: 0
+  separator: "\n"
+  
+# Search Configuration
+search:
+  initial_top_k: 50
+  final_top_k: 12
+  
+# UI Configuration
+ui:
+  theme: "glass"
+  gallery_columns: 2
+  gallery_rows: 5
+  description_truncate_length: 50
+  
+# Emotion Configuration
+emotions:
+  tones:
+    - "All"
+    - "Happy"
+    - "Sad" 
+    - "Angry"
+    - "Suspensful"
+    - "Surprising"
+    - "Neutral"
+  emotion_mapping:
+    Happy: "joy"
+    Sad: "sad"
+    Angry: "angry"
+    Suspensful: "fear"
+    Surprising: "surprise"
+    Neutral: "neutral"
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "{time} | {level} | {name} | {message}"
+  file: "logs/app.log"

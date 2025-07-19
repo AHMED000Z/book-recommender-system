@@ -49,6 +49,28 @@ coverage.xml
 *.py,cover
 .hypothesis/
 .pytest_cache/
+
+# Application specific
+logs/*.log
+.env
+*.db
+*.sqlite
+chromadb/
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Model files (if caching models locally)
+models/
+embeddings/
+.pytest_cache/
 cover/
 
 # Translations
